@@ -1,0 +1,42 @@
+# Core ML/AI Libraries
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+faiss-cpu>=1.7.4
+scikit-learn>=1.3.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+Pillow>=9.5.0
+opencv-python>=4.7.0
+
+# Visualization & UI
+streamlit>=1.25.0
+matplotlib>=3.7.0
+plotly>=5.14.0
+seaborn>=0.12.0
+
+# API & Web
+fastapi>=0.100.0
+uvicorn>=0.22.0
+python-multipart>=0.0.6
+
+# Utilities & Tools
+tqdm>=4.65.0
+pyyaml>=6.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Development & Testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+jupyter>=1.0.0
+
+# Optional: GPU Support (uncomment if using CUDA)
+# faiss-gpu>=1.7.4
+
+# Optional: Medical NLP (uncomment if needed)
+# scispacy>=0.5.1
+# https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.1/en_core_sci_sm-0.5.1.tar.gz

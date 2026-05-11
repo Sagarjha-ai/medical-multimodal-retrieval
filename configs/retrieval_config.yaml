@@ -1,0 +1,70 @@
+# Retrieval Configuration
+# Medical Multimodal Retrieval System
+
+# FAISS Index Configuration
+faiss:
+  index_type: "IndexFlatIP"  # Inner Product
+  embedding_dim: 512
+  metric: "INNER_PRODUCT"
+  nlist: null  # for IVF indexes
+  nprobe: null  # for IVF indexes
+  
+# Retrieval Parameters
+retrieval:
+  top_k: 5
+  batch_size: 32
+  normalize_embeddings: true
+  similarity_threshold: 0.0
+  
+# Embedding Cache
+embeddings:
+  cache_dir: "embeddings"
+  image_embeddings_file: "image_embeddings.npy"
+  text_embeddings_file: "text_embeddings.npy"
+  precompute: true
+  
+# Data Paths
+data:
+  test_csv: "data/processed/test_processed.csv"
+  image_dir: "data/raw/mimic_cxr"
+  
+# Model Loading
+model:
+  checkpoint_path: "checkpoints/best_model_v2.pth"
+  device: "auto"
+  
+# Preprocessing
+preprocessing:
+  image_size: 224
+  apply_clahe: true
+  clahe_clip_limit: 2.0
+  clahe_tile_grid_size: [8, 8]
+  normalize:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+    
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  workers: 1
+  cors_origins: ["*"]
+  
+# Streamlit Configuration
+streamlit:
+  port: 8501
+  host: "0.0.0.0"
+  theme: "light"
+  
+# Performance
+performance:
+  max_concurrent_requests: 10
+  request_timeout: 30
+  cache_size: 1000
+  
+# Security
+security:
+  max_file_size: 10485760  # 10MB
+  allowed_extensions: [".png", ".jpg", ".jpeg"]
+  sanitize_input: true

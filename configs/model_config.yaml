@@ -1,0 +1,60 @@
+# Model Configuration
+# Medical Multimodal Retrieval System
+
+model:
+  name: "multimodal_retrieval"
+  version: "2.0"
+  
+# Image Encoder (CLIP)
+image_encoder:
+  model_name: "openai/clip-vit-base-patch32"
+  embedding_dim: 512
+  pretrained: true
+  freeze_layers: true
+  unfreeze_last_n: 2
+  
+# Text Encoder (BERT)
+text_encoder:
+  model_name: "bert-base-uncased"
+  embedding_dim: 768
+  pretrained: true
+  max_length: 128
+  freeze_layers: true
+  unfreeze_last_n: 2
+  
+# Projection Heads
+projections:
+  shared_embedding_dim: 512
+  dropout_rate: 0.2
+  image_projection:
+    input_dim: 768
+    hidden_dim: 512
+    output_dim: 512
+  text_projection:
+    input_dim: 768
+    hidden_dim: 512
+    output_dim: 512
+
+# Model Architecture
+architecture:
+  multimodal_fusion: "concatenation"
+  normalization: "l2"
+  temperature: 0.07
+  
+# Input Specifications
+inputs:
+  image_size: 224
+  image_channels: 3
+  text_max_length: 128
+  
+# Output Specifications
+outputs:
+  embedding_dim: 512
+  similarity_metric: "cosine"
+  
+# Model Saving
+checkpointing:
+  save_best_only: true
+  monitor_metric: "val_loss"
+  mode: "min"
+  save_format: "pth"

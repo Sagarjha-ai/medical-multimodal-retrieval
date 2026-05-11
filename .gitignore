@@ -1,0 +1,104 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data & Models (keep small samples only)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+embeddings/*
+!embeddings/.gitkeep
+faiss_index/*
+!faiss_index/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# Jupyter
+.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Medical Data Security
+*.dcm
+*.dicom
+patient_data/
+phi_data/
+
+# Large files (version control)
+*.pkl
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+!checkpoints/best_model_v2.pth
+
+# Documentation build
+docs/_build/
+site/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Streamlit
+.streamlit/
+
+# FAISS
+*.index
+*.faiss
