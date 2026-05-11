@@ -53,8 +53,9 @@ embeddings/*
 !embeddings/.gitkeep
 faiss_index/*
 !faiss_index/.gitkeep
-outputs/*
+outputs/*/
 !outputs/.gitkeep
+!outputs/*/.gitkeep
 
 # Logs
 logs/

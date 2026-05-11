@@ -1,0 +1,2 @@
+# This file ensures the outputs directory structure is tracked by git
+# Actual output files will be generated during runtime
